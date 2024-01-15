@@ -3,29 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form(Task)</title>
+    <title>University of Stirling Sports Centre Membership Application</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .branding {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .branding img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-height: 80px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <form action="">
-            <div id="mainHeading">
-                <h1>Sports Centre membership</h1>
-                <h2>Application Form</h2>
-            </div>
-            <div>
-                <input type="text" placeholder="Motivation for joining:">
-            </div>
-            <div>
-                <input type="text" placeholder="How did you hear about us?">
-            </div>
-            <div>
-                <h3>Member details</h3>
-            </div>
-            <div>
-                <input type="text" placeholder="Title:">
-                <input type="text" name="" id="" placeholder="First name">
-            </div>
-        </form>
+
+    <form id="membershipForm">
+        <!-- University of Stirling Sports Centre Logo -->
+        <div class="branding">
+            <img src="stirling_logo.png" alt="Stirling Sports Centre Logo">
+            <h3>University of Stirling Sports Centre Membership Application</h3>
+        </div>
+
+        <!-- Personal Information Section -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <!-- Membership Category Section -->
+        <fieldset>
+            <legend>Membership Category</legend>
+            <label for="membershipCategory">Select Membership Category:</label>
+            <select id="membershipCategory" name="membershipCategory" required>
+                <option value="student">Student</option>
+                <option value="staff">Staff</option>
+                <option value="alumni">Alumni</option>
+                <option value="community">Community</option>
+                <option value="corporate">Corporate</option>
+                <option value="concession">Concession</option>
+            </select>
+
+            <label for="membershipDuration">Preferred Duration:</label>
+            <select id="membershipDuration" name="membershipDuration" required>
+                <option value="monthly">Monthly</option>
+                <option value="oneSemester">One Semester</option>
+                <option value="twoSemesters">Two Semesters</option>
+            </select>
+        </fieldset>
+
+        <!-- Payment Details Section -->
+        <fieldset>
+            <legend>Payment Details</legend>
+            <label for="bankInfo">Banking Information:</label>
+            <input type="text" id="bankInfo" name="bankInfo" required>
+
+            <label for="autoPayments">Authorization for Automatic Payments:</label>
+            <input type="checkbox" id="autoPayments" name="autoPayments" required>
+        </fieldset>
+
+        <!-- Referral Section -->
+        <fieldset>
+            <legend>Referral</legend>
+            <label for="referral">Are you linked to an existing member for joint membership benefits?</label>
+            <input type="checkbox" id="referral" name="referral">
+        </fieldset>
+
+        <!-- Terms and Conditions Section -->
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+            <label for="termsAgree">I agree to the terms and conditions:</label>
+            <input type="checkbox" id="termsAgree" name="termsAgree" required>
+
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature" required>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- University Tagline -->
+    <div class="branding">
+        <p>BE THE DIFFERENCE</p>
     </div>
+
 </body>
 </html>
